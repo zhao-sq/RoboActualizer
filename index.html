@@ -470,6 +470,19 @@
         <h2 class="title is-3">Further Analysis</h2>
       </div>
     </div>
+    <div class="lightweight-analysis content">
+      <p>
+        <strong class="analysis-question">How does a lightweight actualizer help?</strong><br>
+        Joint latent-and-action prediction is essential: removing the latent target reduces success from 60.0% to 17.9%, showing that an action-only policy on frozen V-JEPA features generalizes poorly. By explicitly actualizing future latents, the lightweight model unlocks the world model's predictive structure, while PCA visualizations show that it faithfully predicts both task-conditioned and instruction-dependent diverse futures.
+      </p>
+    </div>
+    <figure class="pca-figure">
+      <img
+        src="./static/images/pca_final_cropped.png"
+        alt="PCA visualization of task-conditioned future latent predictions on LIBERO and RoboTwin tasks."
+        loading="lazy"
+        decoding="async">
+    </figure>
     <div class="ablation-summary content">
       <p>
         <strong class="analysis-question">How is RoboActualizer different from latent world action models?</strong><br>
@@ -523,19 +536,6 @@
         </tbody>
       </table>
     </div>
-    <div class="lightweight-analysis content">
-      <p>
-        <strong class="analysis-question">How does a lightweight actualizer help?</strong><br>
-        Joint latent-and-action prediction is essential: removing the latent target reduces success from 60.0% to 17.9%, showing that an action-only policy on frozen V-JEPA features generalizes poorly. By explicitly actualizing future latents, the lightweight model unlocks the world model's predictive structure, while PCA visualizations show that it faithfully predicts both task-conditioned and instruction-dependent diverse futures.
-      </p>
-    </div>
-    <figure class="pca-figure">
-      <img
-        src="./static/images/pca_final_cropped.png"
-        alt="PCA visualization of task-conditioned future latent predictions on LIBERO and RoboTwin tasks."
-        loading="lazy"
-        decoding="async">
-    </figure>
   </div>
 </section>
 

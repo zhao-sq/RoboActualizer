@@ -146,7 +146,7 @@ table.performance-table tr > th:first-child {
 }
 
 .pca-figure {
-  margin: 0;
+  margin: 0 0 2.5rem;
 }
 
 .pca-figure img {
