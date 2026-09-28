@@ -329,9 +329,9 @@
       \[
       \begin{aligned}
       p(\mathbf z^+_{t:t+H},\mathbf a_{t:t+H}\mid z_t,\ell)
-      &amp;=\underbrace{p(\mathbf z^+_{t:t+H}\mid z_t)}_{\text{\textbf{prior}: given by }g_\phi}
-      \underbrace{\frac{p(\ell\mid \mathbf z^+_{t:t+H},z_t)}{p(\ell\mid z_t)}}_{\text{\textbf{selection}: learned}}
-      \underbrace{p(\mathbf a_{t:t+H}\mid \mathbf z^+_{t:t+H},z_t)}_{\text{\textbf{realization}: learned}}.
+      &amp;=\underbrace{p(\mathbf z^+_{t:t+H}\mid z_t)}_{\mathbf{prior}\text{: given by }g_\phi}
+      \underbrace{\frac{p(\ell\mid \mathbf z^+_{t:t+H},z_t)}{p(\ell\mid z_t)}}_{\mathbf{selection}\text{: learned}}
+      \underbrace{p(\mathbf a_{t:t+H}\mid \mathbf z^+_{t:t+H},z_t)}_{\mathbf{realization}\text{: learned}}.
       \end{aligned}
       \tag{2}
       \]
