@@ -27,6 +27,179 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.abstract-teaser {
+  margin: 1.5rem auto 2rem;
+}
+
+.abstract-teaser img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.methodology-equations {
+  margin: 1rem 0 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.methodology-equations mjx-container[display="true"] {
+  min-width: 62rem;
+}
+
+.methodology-explanation {
+  margin: 1.5rem 0 1rem;
+  text-align: left;
+}
+
+.table-scroll {
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.performance-table {
+  width: 100%;
+  min-width: 54rem;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.performance-table-wide {
+  min-width: 64rem;
+}
+
+.performance-table caption {
+  padding-bottom: 0.75rem;
+  color: #363636;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.performance-table th,
+.performance-table td {
+  padding: 0.5rem 0.4rem;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.performance-table thead {
+  border-top: 2px solid #363636;
+  border-bottom: 2px solid #363636;
+}
+
+.performance-table tbody tr:last-child {
+  border-bottom: 2px solid #363636;
+}
+
+.performance-table th:first-child {
+  border-right: 1px solid #b5b5b5;
+  text-align: left;
+}
+
+.performance-table .ours-row {
+  border-top: 2px solid #3273dc;
+  background: #f2f8fc;
+  color: #1d5f8a;
+}
+
+.performance-summary {
+  margin-bottom: 2rem;
+}
+
+.real-world-summary {
+  margin: 2rem 0 1.25rem;
+}
+
+.real-world-video {
+  margin-bottom: 2rem;
+}
+
+.real-world-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.ablation-summary {
+  margin: 2rem 0 1.25rem;
+}
+
+.analysis-question {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.lightweight-analysis {
+  margin: 2rem 0 1.25rem;
+}
+
+.pca-figure {
+  margin: 0;
+}
+
+.pca-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ablation-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1.5rem 0 2rem;
+}
+
+.ablation-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.performance-table.ablation-table {
+  min-width: 31rem;
+  font-size: 0.7rem;
+}
+
+.performance-table.allocation-table {
+  min-width: 22rem;
+}
+
+.ablation-table caption {
+  min-height: 3.8rem;
+}
+
+.ablation-table .group-start {
+  border-top: 1.5px solid #7a7a7a;
+}
+
+.ablation-no {
+  color: #d33c3c;
+  font-weight: 700;
+}
+
+.ablation-yes {
+  color: #238636;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .ablation-tables {
+    grid-template-columns: 1fr;
+  }
+
+  .ablation-table caption {
+    min-height: 0;
+  }
+}
+
 
 .publication-title {
 }

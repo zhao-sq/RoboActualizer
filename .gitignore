@@ -1,0 +1,4 @@
+# Original video sources are kept locally; the website uses the optimized
+# *-web.mp4 versions instead.
+static/videos/websitevideo.mp4
+static/videos/real_world.mp4
