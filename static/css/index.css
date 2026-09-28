@@ -133,7 +133,7 @@ table.performance-table tr > th:first-child {
 }
 
 .ablation-summary {
-  margin: 2rem 0 1.25rem;
+  margin: 2rem 0 1rem;
 }
 
 .analysis-question {
@@ -155,25 +155,29 @@ table.performance-table tr > th:first-child {
   height: auto;
 }
 
-.ablation-tables {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 1.5rem;
-  align-items: start;
-  margin: 1.5rem 0 2rem;
-}
-
 .ablation-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  margin: 0 0 2rem;
 }
 
 .performance-table.ablation-table {
-  font-size: 0.72rem;
+  width: auto;
+  margin: 0 auto;
 }
 
 .ablation-table caption {
-  min-height: 3.8rem;
+  text-align: center;
+  padding-bottom: 0.6rem;
+}
+
+table.performance-table.ablation-table tr > th,
+table.performance-table.ablation-table tr > td {
+  padding: 0.5rem 1.1rem;
+}
+
+table.performance-table.ablation-table tr > th:first-child {
+  width: auto;
 }
 
 .ablation-table .group-start {
@@ -190,15 +194,6 @@ table.performance-table tr > th:first-child {
   font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
-  .ablation-tables {
-    grid-template-columns: 1fr;
-  }
-
-  .ablation-table caption {
-    min-height: 0;
-  }
-}
 
 
 .publication-title {

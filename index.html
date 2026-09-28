@@ -457,54 +457,53 @@
         <strong class="analysis-question">How is RoboActualizer different from latent world action models?</strong><br>
         Unlike latent world action models that use large networks to learn future dynamics in semantic feature spaces, RoboActualizer reuses predictive structure already present in a frozen video world model and only learns to select and realize a task-conditioned future. The representation ablation confirms that temporal predictivity matters more than representation strength alone, enabling a much smaller actualizer.
       </p>
+    </div>
+    <div class="ablation-table-wrap" role="region" aria-label="Latent representation ablation results" tabindex="0">
+      <table class="performance-table ablation-table representation-table">
+        <caption>
+          Ablation study on latent representation. Future predictivity within the latent space is more important than representation ability.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Representation</th>
+            <th scope="col">Params.</th>
+            <th scope="col">Input Range</th>
+            <th scope="col">Latent Predictivity</th>
+            <th scope="col">Success Rates (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">DINOv3</th><td>300M</td><td>1 frame</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>39.7</td></tr>
+          <tr><th scope="row">WAN VAE</th><td>127M</td><td>4 frames</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>25.9</td></tr>
+          <tr class="group-start"><th scope="row">V-JEPA 2.1<sub>image</sub></th><td>300M</td><td>1 frame</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>46.4</td></tr>
+          <tr><th scope="row">V-JEPA 2.1<sub>image</sub></th><td>300M</td><td>4 frames</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>44.8</td></tr>
+          <tr class="group-start"><th scope="row">V-JEPA 2.1<sub>video</sub></th><td>300M</td><td>4 frames</td><td><span class="ablation-yes" aria-label="Yes">✓</span></td><td><strong>60.0</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ablation-summary content">
       <p>
         <strong class="analysis-question">How to allocate the computation?</strong><br>
         Scaling the frozen world model improves success more than scaling the trainable actualizer. This indicates that predictive capacity is best placed in the pretrained prior, while a compact actualizer is sufficient for future selection and action realization.
       </p>
     </div>
-    <div class="ablation-tables">
-      <div class="ablation-table-wrap" role="region" aria-label="Latent representation ablation results" tabindex="0">
-        <table class="performance-table ablation-table representation-table">
-          <caption>
-            Ablation study on latent representation. Future predictivity within the latent space is more important than representation ability.
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Representation</th>
-              <th scope="col">Params.</th>
-              <th scope="col">Input Range</th>
-              <th scope="col">Latent Predictivity</th>
-              <th scope="col">Success Rates (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">DINOv3</th><td>300M</td><td>1 frame</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>39.7</td></tr>
-            <tr><th scope="row">WAN VAE</th><td>127M</td><td>4 frames</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>25.9</td></tr>
-            <tr class="group-start"><th scope="row">V-JEPA 2.1<sub>image</sub></th><td>300M</td><td>1 frame</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>46.4</td></tr>
-            <tr><th scope="row">V-JEPA 2.1<sub>image</sub></th><td>300M</td><td>4 frames</td><td><span class="ablation-no" aria-label="No">✕</span></td><td>44.8</td></tr>
-            <tr class="group-start"><th scope="row">V-JEPA 2.1<sub>video</sub></th><td>300M</td><td>4 frames</td><td><span class="ablation-yes" aria-label="Yes">✓</span></td><td><strong>60.0</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="ablation-table-wrap" role="region" aria-label="Computation allocation ablation results" tabindex="0">
-        <table class="performance-table ablation-table allocation-table">
-          <caption>Computation allocation between world model and actualizer.</caption>
-          <thead>
-            <tr>
-              <th scope="col">World Model</th>
-              <th scope="col">Actualizer</th>
-              <th scope="col">Success Rates (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">V-JEPA 2.1 (80M)</th><td>DiT-S (60M)</td><td>50.7</td></tr>
-            <tr><th scope="row">V-JEPA 2.1 (80M)</th><td>DiT-B (245M)</td><td>53.2</td></tr>
-            <tr><th scope="row">V-JEPA 2.1 (300M)</th><td>DiT-S (60M)</td><td>60.0</td></tr>
-            <tr><th scope="row">V-JEPA 2.1 (300M)</th><td>DiT-B (245M)</td><td><strong>61.0</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="ablation-table-wrap" role="region" aria-label="Computation allocation ablation results" tabindex="0">
+      <table class="performance-table ablation-table allocation-table">
+        <caption>Computation allocation between world model and actualizer.</caption>
+        <thead>
+          <tr>
+            <th scope="col">World Model</th>
+            <th scope="col">Actualizer</th>
+            <th scope="col">Success Rates (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">V-JEPA 2.1 (80M)</th><td>DiT-S (60M)</td><td>50.7</td></tr>
+          <tr><th scope="row">V-JEPA 2.1 (80M)</th><td>DiT-B (245M)</td><td>53.2</td></tr>
+          <tr><th scope="row">V-JEPA 2.1 (300M)</th><td>DiT-S (60M)</td><td>60.0</td></tr>
+          <tr><th scope="row">V-JEPA 2.1 (300M)</th><td>DiT-B (245M)</td><td><strong>61.0</strong></td></tr>
+        </tbody>
+      </table>
     </div>
     <div class="lightweight-analysis content">
       <p>
