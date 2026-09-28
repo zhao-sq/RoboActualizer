@@ -61,15 +61,10 @@ body {
 
 .performance-table {
   width: 100%;
-  min-width: 54rem;
   border-collapse: collapse;
   background: #fff;
   font-size: 0.78rem;
   line-height: 1.3;
-}
-
-.performance-table-wide {
-  min-width: 64rem;
 }
 
 .performance-table caption {
@@ -78,14 +73,29 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   text-align: left;
+  caption-side: top;
 }
 
-.performance-table th,
-.performance-table td {
-  padding: 0.5rem 0.4rem;
+/* Bulma ships `table td:not([align]), table th:not([align]) { text-align: inherit }`,
+   which outranks `.performance-table td`, so these selectors carry the extra
+   specificity needed to actually center the cells. */
+table.performance-table tr > th,
+table.performance-table tr > td {
+  padding: 0.5rem 0.6rem;
   border-bottom: 1px solid #dbdbdb;
   text-align: center;
+  vertical-align: middle;
   white-space: nowrap;
+}
+
+table.performance-table thead tr > th {
+  font-weight: 600;
+}
+
+table.performance-table tr > th:first-child {
+  width: 1%;
+  border-right: 1px solid #b5b5b5;
+  text-align: left;
 }
 
 .performance-table thead {
@@ -95,11 +105,6 @@ body {
 
 .performance-table tbody tr:last-child {
   border-bottom: 2px solid #363636;
-}
-
-.performance-table th:first-child {
-  border-right: 1px solid #b5b5b5;
-  text-align: left;
 }
 
 .performance-table .ours-row {
@@ -164,12 +169,7 @@ body {
 }
 
 .performance-table.ablation-table {
-  min-width: 31rem;
-  font-size: 0.7rem;
-}
-
-.performance-table.allocation-table {
-  min-width: 22rem;
+  font-size: 0.72rem;
 }
 
 .ablation-table caption {
