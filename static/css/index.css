@@ -161,22 +161,27 @@ table.performance-table tr > th:first-child {
   margin: 0 0 2rem;
 }
 
-.performance-table.ablation-table {
+.performance-table.ablation-table,
+.performance-table.performance-table-compact {
   width: auto;
   margin: 0 auto;
 }
 
-.ablation-table caption {
+.ablation-table caption,
+.performance-table-compact caption {
   text-align: center;
   padding-bottom: 0.6rem;
 }
 
 table.performance-table.ablation-table tr > th,
-table.performance-table.ablation-table tr > td {
+table.performance-table.ablation-table tr > td,
+table.performance-table.performance-table-compact tr > th,
+table.performance-table.performance-table-compact tr > td {
   padding: 0.5rem 1.1rem;
 }
 
-table.performance-table.ablation-table tr > th:first-child {
+table.performance-table.ablation-table tr > th:first-child,
+table.performance-table.performance-table-compact tr > th:first-child {
   width: auto;
 }
 

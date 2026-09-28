@@ -357,7 +357,7 @@
       </div>
     </div>
     <div class="performance-summary content">
-      Our method achieves better performance on both the LIBERO and LIBERO-Plus benchmarks.
+      Our method achieves better performance across the LIBERO, LIBERO-Plus, and RoboTwin 2.0 benchmarks, covering both single-arm and bimanual simulation.
       These results show that our method delivers strong performance with substantially fewer trainable parameters.
     </div>
     <div class="table-scroll" role="region" aria-label="LIBERO benchmark results" tabindex="0">
@@ -420,6 +420,24 @@
           <tr><th scope="row">Fast-WAM</th><td>6.02B</td><td>16.4</td><td>44.5</td><td>68.9</td><td>78.2</td><td>53.7</td><td>37.7</td><td>60.7</td><td>51.5</td><td>111.7</td></tr>
           <tr><th scope="row">DC-WAM</th><td>6.00B</td><td>23.9</td><td><strong>51.7</strong></td><td><strong>83.4</strong></td><td><strong>91.7</strong></td><td>61.3</td><td>54.2</td><td><strong>69.8</strong></td><td>60.9</td><td>—*</td></tr>
           <tr class="ours-row"><th scope="row">RoboActualizer (ours)</th><td><strong>60M</strong></td><td>37.6</td><td>51.1</td><td>68.6</td><td>85.1</td><td>60.4</td><td>54.5</td><td>60.9</td><td><strong>63.1</strong></td><td><strong>39.9</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-scroll" role="region" aria-label="RoboTwin 2.0 benchmark results" tabindex="0">
+      <table class="performance-table performance-table-compact">
+        <caption>Success rates (%) on RoboTwin 2.0 (50 demos per task).</caption>
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Trainable Params.</th>
+            <th scope="col">Success Rates (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">π<sub>0.5</sub></th><td>3.3B</td><td>31.4</td></tr>
+          <tr><th scope="row">LingBot-VA</th><td>5.3B</td><td>17.2</td></tr>
+          <tr><th scope="row">Fast-WAM</th><td>6.0B</td><td>41.9</td></tr>
+          <tr class="ours-row"><th scope="row">RoboActualizer (ours)</th><td><strong>60M</strong></td><td><strong>58.8</strong></td></tr>
         </tbody>
       </table>
     </div>
