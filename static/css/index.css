@@ -336,3 +336,8 @@ table.performance-table.performance-table-compact tr > th:first-child {
 .publication-affiliations .author-block {
   margin: 0 0.6rem;
 }
+
+.hf-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
