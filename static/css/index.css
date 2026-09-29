@@ -328,3 +328,11 @@ table.performance-table.performance-table-compact tr > th:first-child {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.publication-authors .author-block sup {
+  font-size: 0.65em;
+}
+
+.publication-affiliations .author-block {
+  margin: 0 0.6rem;
+}
