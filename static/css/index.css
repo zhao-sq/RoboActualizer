@@ -341,3 +341,22 @@ table.performance-table.performance-table-compact tr > th:first-child {
   width: 1.15em;
   height: 1.15em;
 }
+
+.affiliation-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 2.5rem;
+  margin: 1.25rem auto 0.5rem;
+}
+
+.affiliation-logos img {
+  height: 3.2rem;
+  width: auto;
+  max-width: 100%;
+}
+
+.affiliation-logos .logo-sustech {
+  height: 3.9rem;
+}
