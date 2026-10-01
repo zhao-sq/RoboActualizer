@@ -339,7 +339,7 @@
       p(\mathbf z^+_{t:t+H},\mathbf a_{t:t+H}\mid z_t,\ell)
       &amp;=\underbrace{p(\mathbf z^+_{t:t+H}\mid z_t)}_{\mathbf{prior}\text{: given by }g_\phi}
       \underbrace{\frac{p(\ell\mid \mathbf z^+_{t:t+H},z_t)}{p(\ell\mid z_t)}}_{\mathbf{selection}\text{: learned}}
-      \underbrace{p(\mathbf a_{t:t+H}\mid \mathbf z^+_{t:t+H},z_t)}_{\mathbf{realization}\text{: learned}}.
+      \underbrace{p(\mathbf a_{t:t+H}\mid \mathbf z^+_{t:t+H},z_t, \ell)}_{\mathbf{realization}\text{: learned}}.
       \end{aligned}
       \tag{2}
       \]
@@ -423,8 +423,8 @@
           <tr><th scope="row">UniVLA</th><td>123M</td><td>1.8</td><td>46.2</td><td>69.6</td><td>69.0</td><td>81.0</td><td>21.2</td><td>31.9</td><td>42.9</td><td>157.3</td></tr>
           <tr><th scope="row">WorldVLA</th><td>7.04B</td><td>0.1</td><td>27.9</td><td>41.6</td><td>43.7</td><td>17.1</td><td>10.9</td><td>38.0</td><td>25.0</td><td>397.5</td></tr>
           <tr><th scope="row">Fast-WAM</th><td>6.02B</td><td>16.4</td><td>44.5</td><td>68.9</td><td>78.2</td><td>53.7</td><td>37.7</td><td>60.7</td><td>51.5</td><td>111.7</td></tr>
-          <tr><th scope="row">DC-WAM</th><td>6.00B</td><td>23.9</td><td><strong>51.7</strong></td><td><strong>83.4</strong></td><td><strong>91.7</strong></td><td>61.3</td><td>54.2</td><td><strong>69.8</strong></td><td>60.9</td><td>—*</td></tr>
-          <tr class="ours-row"><th scope="row">RoboActualizer (ours)</th><td><strong>60M</strong></td><td>37.6</td><td>51.1</td><td>68.6</td><td>85.1</td><td>60.4</td><td>54.5</td><td>60.9</td><td><strong>63.1</strong></td><td><strong>39.9</strong></td></tr>
+          <tr><th scope="row">DC-WAM</th><td>6.00B</td><td>23.9</td><td>51.7</td><td><strong>83.4</strong></td><td><strong>91.7</strong></td><td>61.3</td><td>54.2</td><td><strong>69.8</strong></td><td>60.9</td><td>—*</td></tr>
+          <tr class="ours-row"><th scope="row">RoboActualizer (ours)</th><td><strong>60M</strong></td><td>39.5</td><td><strong>60.5</strong></td><td>70.7</td><td>87.2</td><td>56.9</td><td>59.0</td><td>67.8</td><td><strong>63.1</strong></td><td><strong>39.9</strong></td></tr>
         </tbody>
       </table>
     </div>
